@@ -1,0 +1,49 @@
+﻿@using HealthCare.Areas.Identity.Data;
+@using Microsoft.AspNetCore.Identity;
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+<ul class="navbar-nav flex-grow-1">
+    
+    @if (!User.IsInRole("Admin"))
+    {
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact">Contact</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="FAQ">FAQ</a>
+        </li>       
+    }
+
+    @if (SignInManager.IsSignedIn(User))
+    {      
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Insurance" asp-action="Index">Insurance</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Appointment" asp-action="Index">Appointment</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Product" asp-action="Index">Products</a>
+        </li>
+        if (User.IsInRole("Admin"))
+        {
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Speciality" asp-action="Index">Speciality</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Doctor" asp-action="Index">Doctor</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Clinic" asp-action="Index">Clinic</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="ClinicDoctor" asp-action="Index">Assign Doctor to Clinic</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Index">Users</a>
+            </li>
+        }
+    }
+</ul>

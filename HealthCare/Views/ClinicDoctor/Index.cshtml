@@ -1,0 +1,45 @@
+﻿@model IEnumerable<HealthCare.Models.ClinicDoctor>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Clinic)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Doctor)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Clinic.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Doctor.FullName)
+                </td>
+                <td>                    
+                    @Html.ActionLink("Delete", "Delete", new {  doctorId = item.DoctorId, clinicId = item.ClinicId  })
+                </td>
+            </tr>
+        }
+        @if (TempData["Error"] != null)
+        {
+            <script>alert('@TempData["Error"]');</script>
+        }
+    </tbody>
+</table>

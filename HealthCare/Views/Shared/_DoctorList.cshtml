@@ -1,0 +1,28 @@
+﻿<script type="text/javascript">
+        $(document).ready(function () {
+            $("#clinic").change(function () {
+                $("#doctor").empty();
+                $.ajax({
+                    type: 'POST',
+                    url: '@Url.Action("getDoctors")',
+                    dataType: 'json',
+                    data: { id: $("#clinic").val() },
+
+                    success: function (doctors) {
+                        $.each(doctors, function (i, doctor) {
+                            $("#doctor").append(
+                                '<option value="' +
+                                    doctor.value + '">' +
+                                    doctor.text +
+                                '</option>'
+                            );
+                        });
+                    },
+                    error: function (ex) {
+                        alert('Failed to retrieve doctors');
+                    }
+                });
+                return false;
+            });
+        });
+    </script>

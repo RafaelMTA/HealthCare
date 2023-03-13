@@ -1,0 +1,54 @@
+﻿@model HealthCare.Models.Insurance
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Select Period</h1>
+
+<h4>Insurance</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <div class="form-group">
+            <h2>@ViewBag.Product.Name</h2>
+            <hr />
+            <span>@ViewBag.Product.Description</span>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Start" class="control-label"></label>
+                <input asp-for="Start" class="form-control" />
+                <span asp-validation-for="Start" class="text-danger"></span>
+            </div>
+            <br/>
+            <div class="form-group">
+                <label asp-for="End" class="control-label"></label>
+                <input asp-for="End" class="form-control" />
+                <span asp-validation-for="End" class="text-danger"></span>
+            
+            </div>
+            <br />
+            <input type="hidden" asp-for="ProductId" />
+            <div class="form-group">
+                <input type="submit" value="Inquiry" class="btn btn-primary" />
+            </div>
+            @if (TempData["Error"] != null)
+            {
+                <script>alert('@TempData["Error"]');</script>
+            }
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-controller="Product" asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

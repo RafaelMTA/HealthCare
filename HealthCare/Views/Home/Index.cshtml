@@ -1,0 +1,238 @@
+﻿@{
+    ViewData["Title"] = "LifeSec";
+}
+
+<section class="d-flex flex-column justify-content-between">
+    <div id="title">
+        <h2>@ViewData["Title"]</h2><hr />
+    </div>
+    <div class="rounded"
+         id="header-container"
+         style="
+            background-image: url('https://images.pexels.com/photos/39691/family-pier-man-woman-39691.jpeg?auto=compress&cs=tinysrgb&w=600');
+            height: 100vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;">
+        <div style="
+                width: 50%;
+                margin: 20px;
+                text-align: justify;
+                text-justify: inter-word;
+            ">
+            <div id="header-title">
+                <h3>Insurance</h3>
+            </div>
+            <div id="header-body">
+                <span>
+                    LifeSec provides you with control and choice over your medical care.
+                    Get cover for elegible costs for treatments for you, your family or employees.
+                    We prioritize your health and wellbeing.
+                </span>
+            </div>
+        </div>
+    </div>
+    <br />
+    <hr />
+    <h3>Services</h3>
+    <hr />
+    <br />
+    <div id="card-container" class="d-flex">
+        <div class="card" style="width: 18rem;">
+            <div class="bg-image hover-zoom">
+                <img src="https://free-vectors.net/_ph/5/1/989680773.jpg?1676844872"
+                     class="card-img-top w-100"
+                     alt="...">
+            </div>
+            <hr />
+            <div class="card-body">
+                <h5 class="card-title" style="border-bottom: 1px solid black;">Doctors</h5>
+                <p class="card-text">Search for the specialty that you need.</p>
+                <a href="/Doctor" class="btn btn-primary">Find your specialty</a>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <div class="bg-image hover-zoom">
+                <img src="https://free-vectors.net/_ph/11/1/38951625.jpg?1676845121"
+                     class="card-img-top w-100"
+                     alt="...">
+            </div>
+            <hr />
+            <div class="card-body">
+                <h5 class="card-title" style="border-bottom: 1px solid black;">Locations & Directions</h5>
+                <p class="card-text">Find the nearest clinic to your location.</p>
+                <a href="/Clinic" class="btn btn-primary">Get Directions</a>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <div class="bg-image hover-zoom">
+                <img src="https://free-vectors.net/_ph/14/1/977382144.jpg?1676844809"
+                     class="card-img-top w-100"
+                     alt="...">
+            </div>
+            <hr />
+            <div class="card-body">
+                <h5 class="card-title" style="border-bottom: 1px solid black;">Appointments</h5>
+                <p class="card-text">Get an appointment in person or online.</p>
+                <a href="/Appointment" class="btn btn-primary">Schedule</a>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <div class="bg-image hover-zoom">
+                <img src="https://free-vectors.net/_ph/14/1/830383181.jpg?1676845251"
+                     class="card-img-top w-100"
+                     alt="...">
+            </div>
+            <hr />
+            <div class="card-body">
+                <h5 class="card-title" style="border-bottom: 1px solid black;">Contact</h5>
+                <p class="card-text">Couldn't find the information that you need? Get in contact with us.</p>
+                <a href="/Home/Contact" class="btn btn-primary">Go to Contacts</a>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div id="whyinsurance-container">
+        <div id="whyinsurance-title">
+            <hr />
+            <h3>Why do I need health insurance?</h3>
+            <hr />
+            <br />
+        </div>
+        <div id="whyinsurance-content" class="d-flex flex-row justify-content-around" style="height: 15rem;">
+            <div id="item-container" class="card d-flex justify-content-around align-items-center" style="width: 30%;">
+                <div class="d-flex justify-content-center align-items-center">
+                    <img src="https://cdn-icons-png.flaticon.com/128/2438/2438078.png"
+                         style="width: 5rem; height: 5rem;" />
+                </div>
+
+                <div id="item-title"><h4>Security and Agility</h4><hr /></div>
+                <div id="item-content"><span>We provide you security, easy and fast access to medical care.</span></div>
+            </div>
+            <div id="item-container" class="card d-flex justify-content-around align-items-center" style="width: 30%;">
+                <div class="d-flex justify-content-center align-items-center">
+                    <img src="https://cdn-icons-png.flaticon.com/128/2833/2833779.png"
+                         style="width: 5rem; height: 5rem;" />
+                </div>
+                <div id="item-title"><h4>Control and Flexibility</h4><hr /></div>
+                <div id="item-content"><span>With different illnesses, you only pay for the coverages that you need.</span></div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div id="chooseus-container">
+        <div id="choioseus-title">
+            <hr /><h3>Why choose us?</h3><hr />
+            <br/>
+        </div>
+        <div id="card-container" class="d-flex flex-row justify-content-around">
+            <div class="card d-flex flex-column justify-content-around" style="width: 18rem;">
+                <div class="bg-image hover-zoom d-flex justify-content-center align-items-center" style="margin: 10px">
+                    <img style="width: 5rem; height: 5rem;"
+                         src="https://cdn-icons-png.flaticon.com/128/888/888034.png"
+                         class="card-img-top"
+                         alt="...">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">No Burocracy</h5>
+                    <p class="card-text">Couldn't find the information that you need? Get in contact with us.</p>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <div class="bg-image hover-zoom d-flex justify-content-center align-items-center" style="margin: 10px">
+                    <img style="width: 5rem; height: 5rem;"
+                         src="https://cdn-icons-png.flaticon.com/128/925/925748.png"
+                         class="card-img-top"
+                         alt="...">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Affordable Plans</h5>
+                    <p class="card-text">Couldn't find the information that you need? Get in contact with us.</p>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <div class="bg-image hover-zoom d-flex justify-content-center align-items-center" style="margin: 10px">
+                    <img style="width: 5rem; height: 5rem;"
+                         src="https://cdn-icons-png.flaticon.com/128/1067/1067566.png"
+                         class="card-img-top"
+                         alt="...">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Full Support</h5>
+                    <p class="card-text">Couldn't find the information that you need? Get in contact with us.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <hr />
+    <br/>
+    <div>
+        <div class="d-flex flex-row justify-content-between">
+            <a href="/Home/Contact" class="text-decoration-none border">
+                <div class="d-flex flex-row justify-content-between align-items-center">
+                    <div class="bg-image hover-zoom">
+                        <img style="width: 5rem; height: 5rem; margin: 15px;"
+                             src="https://cdn-icons-png.flaticon.com/128/1642/1642061.png"
+                             class="card-img-top"
+                             alt="...">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Have a enquiry?</h5>
+                        <p class="card-text">Get in contact with us and we`ll assist you.</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/Home/Feedback" class="text-decoration-none border">
+                <div class="d-flex flex-row justify-content-between align-items-center">
+                    <div class="bg-image hover-zoom">
+                        <img style="width: 5rem; height: 5rem; margin: 15px;"
+                             src="https://cdn-icons-png.flaticon.com/128/813/813419.png"
+                             class="card-img-top"
+                             alt="...">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Have complaints?</h5>
+                        <p class="card-text">Tell us your feedback</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/Home/FAQ" class="text-decoration-none border">
+                <div class="d-flex flex-row justify-content-between align-items-center">
+                    <div class="bg-image hover-zoom">
+                        <img style="width: 5rem; height: 5rem; margin: 15px;"
+                             src="https://cdn-icons-png.flaticon.com/128/942/942802.png"
+                             class="card-img-top"
+                             alt="...">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Still have doubts?</h5>
+                        <p class="card-text">Check our FAQ and find your answers</p>
+                    </div>
+                </div>
+            </a>
+
+            <div class="d-flex flex-column justify-content-center align-items-center border">
+                <div>
+                    <h5>Social media</h5>
+                </div>
+                <div class="card-body d-flex flex-row justify-content-around">
+                    <a href="#">
+                        <img style="width: 2rem; height: 2rem;"
+                             src="https://cdn-icons-png.flaticon.com/128/2335/2335417.png" />
+                    </a>
+                    <a href="#">
+                        <img style="width: 2rem; height: 2rem;"
+                             src="https://cdn-icons-png.flaticon.com/128/739/739237.png" />
+                    </a>
+                    <a href="#">
+                        <img style="width: 2rem; height: 2rem;"
+                             src="https://cdn-icons-png.flaticon.com/128/725/725339.png" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
